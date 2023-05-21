@@ -8,7 +8,7 @@ import (
 
 func MysqlConfig() {
 	// 参考 https://github.com/go-sql-driver/mysql#dsn-data-source-name 获取详情
-	dsn := "user:pass@tcp(124.221.87.28:3306)/test_gorm_db?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "user:pass@tcp(localhost:3306)/test_gorm_db?charset=utf8mb4&parseTime=True&loc=Local"
 	config := mysql.Config{
 		DSN:                       dsn,   // DSN data source name
 		DefaultStringSize:         256,   // string 类型字段的默认长度

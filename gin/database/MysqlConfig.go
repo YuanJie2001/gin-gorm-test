@@ -6,7 +6,7 @@ import (
 	"gorm.io/gorm"
 	"time"
 	"yqc-portal/gin/model"
-	"yqc-portal/gin/resource"
+	"yqc-portal/resource"
 )
 
 // db 数据库连接 全局变量

@@ -2,8 +2,8 @@ package main
 
 import (
 	"yqc-portal/gin/database"
-	"yqc-portal/gin/resource"
 	"yqc-portal/gin/router"
+	"yqc-portal/resource"
 )
 
 func main() {

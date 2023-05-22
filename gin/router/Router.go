@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"yqc-portal/gin/controller"
-	"yqc-portal/gin/resource"
+	"yqc-portal/resource"
 )
 import "yqc-portal/gin/middleware"
 

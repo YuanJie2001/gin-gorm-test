@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"yqc-portal/gin/controller"
+	"yqc-portal/gin/resource"
 )
 import "yqc-portal/gin/middleware"
 
@@ -82,10 +83,14 @@ func InitRouter() {
 	v2.Use(middleware.StatCost()) // 给该路由组添加统计耗时中间件
 	{
 		v2_user := v2.Group("/user")
-		v2_user.GET("/list", controller.GetUserList)
-		v2_user.PUT("/updateById", controller.UpdateUserById)
+		// localhost:8080/v2/ GET
+		v2_user.GET("/", controller.GetUserList)
+		// localhost:8080/v2/updateUserNameById POST {"id":1,"name":"test"}
+		v2_user.POST("/updateUserNameById", controller.UpdateUserNameById)
+		// localhost:8080/v2/user/add POST {"name":"test01"}
 		v2_user.POST("/add", controller.AddUser)
-		v2_user.DELETE("/deleteById", controller.DeleteUserById)
+		// localhost:8080/v2/user?id=21 DELETE
+		v2_user.DELETE("/", controller.DeleteUserById)
 
 	}
 
@@ -95,5 +100,5 @@ func InitRouter() {
 			"message": "这个接口不存在",
 		})
 	})
-	router.Run(":8080")
+	router.Run(resource.Server.Port)
 }

@@ -25,8 +25,8 @@ go学习资料:
 >      ├─middleware 中间件目录
 >      ├─model 模型目录
 >      ├─router 路由API目录
->      ├─router 路由API目录
 >      └─service 服务层目录，这里把DAO逻辑也写入其中，如果分开也可以
+>  └─resource yaml配置文件
 >  └─main.go 项目启动文件
 >  └─go.mod 依赖管理
 
